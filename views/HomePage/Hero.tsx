@@ -14,19 +14,19 @@ export default function Hero() {
   return (
     <HeroWrapper>
       <Contents>
-        <CustomOverTitle>the coolest, saas product you have ever seen</CustomOverTitle>
-        <Heading>Make your life easier with our SaaS</Heading>
+        <CustomOverTitle>Your voice. Your vote. Your future.</CustomOverTitle>
+        <Heading>ELECTION COMMISSION
+IIT KANPUR</Heading>
         <Description>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, tempora qui. Explicabo voluptate iure ipsum molestias
-          repudiandae perspiciatis nostrum praesentium, unde pariatur tempora magni rem. Necessitatibus facilis obcaecati ratione.
+        The election commission is mandated to foster the democratic spirit in the students’ self-governance set up - the Students’ Gymkhana. For upholding this spirit, it is necessary that the representatives of the students are elected by the process of free and fair elections.
         </Description>
         <CustomButtonGroup>
           <Button onClick={() => setIsModalOpened(true)}>
-            Subscribe to the newsletter <span>&rarr;</span>
+            CANDIDATES <span>&rarr;</span>
           </Button>
           <NextLink href="#whitepaper" passHref>
             <Button transparent>
-              Features <span>&rarr;</span>
+             MEET OUR TEAM <span>&rarr;</span>
             </Button>
           </NextLink>
         </CustomButtonGroup>

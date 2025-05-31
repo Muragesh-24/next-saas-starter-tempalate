@@ -27,19 +27,18 @@ export default function Homepage({ posts }: InferGetStaticPropsType<typeof getSt
         <WhiteBackgroundContainer>
           <Hero />
           <Partners />
-          <BasicSection imageUrl="/demo-illustration-1.svg" title="Lorem ipsum dolor sit amet consectetur." overTitle="sit amet gogo">
+          <BasicSection imageUrl="/demo-illustration-1.svg" title="Announcement
+Penalties" overTitle="Penalties">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quidem error incidunt a doloremque voluptatem porro inventore
-              voluptate quo deleniti animi laboriosam.{' '}
-              <Link href="/help-center">Possimus ullam velit rem itaque consectetur, in distinctio?</Link> Lorem ipsum, dolor sit amet
-              consectetur adipisicing elit. Soluta repellendus quia quos obcaecati nihil. Laudantium non accusantium, voluptate eum nesciunt
-              at suscipit quis est soluta?
+             Penalties on some students have been imposed during the period of General Election. Please find the list here.
+              <Link href="/help-center">click</Link>
             </p>
           </BasicSection>
-          <BasicSection imageUrl="/demo-illustration-2.svg" title="Lorem ipsum dolor sit." overTitle="lorem ipsum" reversed>
+          <BasicSection imageUrl="/demo-illustration-2.svg" title="Announcement
+CoC Enforced" overTitle="COC" reversed>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quidem error incidunt a doloremque voluptatem porro inventore{' '}
-              <strong>voluptate quo deleniti animi laboriosam</strong>. Possimus ullam velit rem itaque consectetur, in distinctio?
+            The EC announces the onstart of General Elections 2025. The CoC has been enforced. Please find the CoC here.
+           
             </p>
             <ul>
               <li>Professional point 1</li>
@@ -47,6 +46,28 @@ export default function Homepage({ posts }: InferGetStaticPropsType<typeof getSt
               <li>Professional feature 3</li>
             </ul>
           </BasicSection>
+          
+
+ <BasicSection imageUrl="/demo-illustration-1.svg" title="Announcement
+Schedule for General Elections 2025" overTitle="GE-2025">
+            <p>
+            The detailed schedule for the General Elections 2025 can be found at here.
+              <Link href="/help-center">click</Link>
+            </p>
+          </BasicSection>
+
+
+
+
+
+ <BasicSection imageUrl="/demo-illustration-1.svg" title="Announcement
+Call for Nominations" overTitle="Nomination-2025">
+            <p>
+           The General Elections for the Students' Gymkhana and Students' Senate begin from 8th Jan'25. The posts for which elections are being held are here. Please find the process here.
+              <Link href="/help-center">click</Link>
+            </p>
+          </BasicSection>
+
         </WhiteBackgroundContainer>
         <DarkerBackgroundContainer>
           <Cta />
