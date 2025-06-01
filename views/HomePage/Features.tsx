@@ -1,87 +1,165 @@
 import React from 'react';
 import styled from 'styled-components';
-import AutofitGrid from 'components/AutofitGrid';
-import BasicCard from 'components/BasicCard';
-import Container from 'components/Container';
-import { media } from 'utils/media';
+import Image from 'next/image';
 
-const FEATURES = [
+const TEAM = [
   {
-    imageUrl: '/grid-icons/asset-1.svg',
-    title: 'Lorem ipsum dolor sit amet.',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis error dolorem ipsa dolore facere est consequuntur aut, eos doloribus voluptate?',
+    imageUrl: '/team/ceo.png',
+    name: 'PAKI GUPTA',
+    position: 'Chief Election Officer',
+    phone: '+91-9876543210',
+    linkedin: 'https://linkedin.com/in/ananyasharma',
   },
   {
-    imageUrl: '/grid-icons/asset-2.svg',
-    title: 'Lorem ipsum dolor sit amet.',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis error dolorem ipsa dolore facere est consequuntur aut, eos doloribus voluptate?',
+    imageUrl: '/team/member1.png',
+    name: 'Ankit Kumar',
+    position: 'Manager, Marketing',
+    phone: '+91-9988776655',
+    linkedin: 'https://linkedin.com/in/rajmehta',
   },
   {
-    imageUrl: '/grid-icons/asset-3.svg',
-    title: 'Lorem ipsum dolor sit amet.',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis error dolorem ipsa dolore facere est consequuntur aut, eos doloribus voluptate?',
+    imageUrl: '/team/member2.png',
+    name: 'LAKSHITA RATHORE',
+    position: 'Manager, HR',
+    phone: '+91-8899776655',
+    linkedin: 'https://linkedin.com/in/nishaverma',
   },
   {
-    imageUrl: '/grid-icons/asset-4.svg',
-    title: 'Lorem ipsum dolor sit amet.',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis error dolorem ipsa dolore facere est consequuntur aut, eos doloribus voluptate?',
+    imageUrl: '/team/member3.png',
+    name: 'VEDANT DILIP BANSOD',
+    position: 'Manager, Sales',
+    phone: '+91-7788665544',
+    linkedin: 'https://linkedin.com/in/kunalsingh',
   },
   {
-    imageUrl: '/grid-icons/asset-5.svg',
-    title: 'Lorem ipsum dolor sit amet.',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis error dolorem ipsa dolore facere est consequuntur aut, eos doloribus voluptate?',
+    imageUrl: '/team/member4.png',
+    name: 'LOVE CHOURASIA',
+    position: 'Manager, Operations',
+    phone: '+91-6677554433',
+    linkedin: 'https://linkedin.com/in/priyadas',
   },
   {
-    imageUrl: '/grid-icons/asset-6.svg',
-    title: 'Lorem ipsum dolor sit amet.',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis error dolorem ipsa dolore facere est consequuntur aut, eos doloribus voluptate?',
+    imageUrl: '/team/member5.png',
+    name: 'SANYAM CHHETRI',
+    position: 'Manager, Product',
+    phone: '+91-5566443322',
+    linkedin: 'https://linkedin.com/in/amitjoshi',
   },
   {
-    imageUrl: '/grid-icons/asset-7.svg',
-    title: 'Lorem ipsum dolor sit amet.',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis error dolorem ipsa dolore facere est consequuntur aut, eos doloribus voluptate?',
-  },
-  {
-    imageUrl: '/grid-icons/asset-8.svg',
-    title: 'Lorem ipsum dolor sit amet.',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis error dolorem ipsa dolore facere est consequuntur aut, eos doloribus voluptate?',
-  },
-  {
-    imageUrl: '/grid-icons/asset-9.svg',
-    title: 'Lorem ipsum dolor sit amet.',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis error dolorem ipsa dolore facere est consequuntur aut, eos doloribus voluptate?',
+    imageUrl: '/team/member6.png',
+    name: 'SOURAV DEBNATH',
+    position: 'Manager, Finance',
+    phone: '+91-4455332211',
+    linkedin: 'https://linkedin.com/in/snehakapoor',
   },
 ];
 
-export default function Features() {
+export default function MeetTheTeam() {
   return (
-    <Container>
-      <CustomAutofitGrid>
-        {FEATURES.map((singleFeature, idx) => (
-          <BasicCard key={singleFeature.title} {...singleFeature} />
+    <Wrapper>
+      <Title>Meet the Team</Title>
+      <CenteredCard>
+        <TeamCard member={TEAM[0]} />
+      </CenteredCard>
+      <Grid>
+        {TEAM.slice(1).map((member, idx) => (
+          <TeamCard key={idx} member={member} />
         ))}
-      </CustomAutofitGrid>
-    </Container>
+      </Grid>
+    </Wrapper>
   );
 }
 
-const CustomAutofitGrid = styled(AutofitGrid)`
-  --autofit-grid-item-size: 40rem;
+function TeamCard({ member }: { member: any }) {
+  return (
+    <Card>
+      <ImageWrapper>
+        <Image src={member.imageUrl} alt={member.name} width={200} height={200} objectFit="cover" />
+      </ImageWrapper>
+      <Name>{member.name}</Name>
+      <Position>{member.position}</Position>
+      <Phone>📞 {member.phone}</Phone>
+      <LinkedIn href={member.linkedin} target="_blank">LinkedIn Profile</LinkedIn>
+    </Card>
+  );
+}
 
-  ${media('<=tablet')} {
-    --autofit-grid-item-size: 30rem;
+const Wrapper = styled.div`
+  max-width: 1200px;
+  margin: auto;
+  padding: 4rem 2rem;
+  text-align: center;
+`;
+
+const Title = styled.h2`
+  font-size: 3rem;
+  margin-bottom: 4rem;
+`;
+
+const CenteredCard = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4rem;
+`;
+
+const Grid = styled.div`
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+
+  @media (max-width: 900px) {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  ${media('<=phone')} {
-    --autofit-grid-item-size: 100%;
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+`;
+
+const Card = styled.div`
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+  text-align: center;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+`;
+
+const ImageWrapper = styled.div`
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+`;
+
+const Name = styled.h3`
+  font-size: 1.8rem;
+  margin-top: 1rem;
+`;
+
+const Position = styled.p`
+  font-weight: bold;
+  color: #666;
+  margin: 0.5rem 0;
+`;
+
+const Phone = styled.p`
+  font-size: 1.4rem;
+  margin: 0.25rem 0;
+`;
+
+const LinkedIn = styled.a`
+  color: #0a66c2;
+  text-decoration: none;
+  font-size: 1.4rem;
+
+  &:hover {
+    text-decoration: underline;
   }
 `;

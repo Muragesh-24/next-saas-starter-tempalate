@@ -60,21 +60,21 @@ Schedule for General Elections 2025" overTitle="GE-2025">
 
 
 
- <BasicSection imageUrl="/demo-illustration-1.svg" title="Announcement
+ {/* <BasicSection imageUrl="/demo-illustration-1.svg" title="Announcement
 Call for Nominations" overTitle="Nomination-2025">
             <p>
            The General Elections for the Students' Gymkhana and Students' Senate begin from 8th Jan'25. The posts for which elections are being held are here. Please find the process here.
               <Link href="/help-center">click</Link>
             </p>
-          </BasicSection>
+          </BasicSection> */}
 
         </WhiteBackgroundContainer>
         <DarkerBackgroundContainer>
-          <Cta />
+          {/* <Cta /> */}
           <FeaturesGallery />
           <Features />
           <Testimonials />
-          <ScrollableBlogPosts posts={posts} />
+        
         </DarkerBackgroundContainer>
       </HomepageWrapper>
     </>

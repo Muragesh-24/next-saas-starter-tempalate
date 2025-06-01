@@ -75,7 +75,7 @@ export default function Footer() {
               </a>
             </NextLink>
           </ShareBar>
-          <Copyright>&copy; Copyright 2021 My Saas Startup</Copyright>
+          <Copyright>&copy; Copyright Election Commission, All Rights Reserved</Copyright>
         </BottomBar>
       </Container>
     </FooterWrapper>
