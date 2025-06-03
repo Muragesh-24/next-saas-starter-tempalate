@@ -72,11 +72,7 @@ export default function Navbar({ items }: NavbarProps) {
             <Logo />
           </LogoWrapper>
         </NextLink>
-        <NavItemList>
-          {items.map((singleItem) => (
-            <NavItem key={singleItem.href} {...singleItem} />
-          ))}
-        </NavItemList>
+       
         <ColorSwitcherContainer>
           <ColorSwitcher />
         </ColorSwitcherContainer>

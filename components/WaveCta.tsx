@@ -21,12 +21,11 @@ export default function WaveCta() {
       </svg>
       <CtaWrapper>
         <Container>
-          <Title>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus delectus?</Title>
+          <Title>  Empowering Democracy Through Transparent and Fair Elections. <br />
+  Welcome to the Official Election Commission Portal.</Title>
           <CustomButtonGroup>
-            <Button onClick={() => setIsModalOpened(true)}>
-              Subscribe to the newsletter <span>&rarr;</span>
-            </Button>
-            <NextLink href="/features" passHref>
+           
+            <NextLink href="/#" passHref>
               <OutlinedButton transparent>
                 Features <span>&rarr;</span>
               </OutlinedButton>
