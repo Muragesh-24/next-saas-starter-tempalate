@@ -84,7 +84,7 @@ const StyledImage = styled(NextImage)`
               width={500}
               height={350}
             />
-            <div dangerouslySetInnerHTML={{ __html: tab.description }} />
+            {/* <div dangerouslySetInnerHTML={{ __html: tab.description }} /> */}
           </ImageCard>
         ))}
       </GalleryGrid>
